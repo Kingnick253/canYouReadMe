@@ -1,6 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license){
+    return `![License:${license}](https://img.shields.io/badge${license}-green.svg)`
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -10,10 +14,9 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-function renderTitle(title) {
-  return `# ${data.title}`;
 
-}
+
+
 //data.title
 //data.authorName
 //data.description
@@ -22,7 +25,8 @@ function renderTitle(title) {
 function generateMarkdown(data) {
     return `# ${renderTitle(data.title)}
 
-    ## Description
+    ## Description 
+    ${data.description}
     
     Brief description explaining the what, why, and how
     - what was the motivation?
@@ -39,11 +43,11 @@ function generateMarkdown(data) {
     - [Questions](#questions)
     
     ## Installation
+    ${data.installation}
     
-    What are the steps required to install this
     
     ## Usage
-    
+    $
     Provide instructions and examples for use. Include Screenshots/Screenrecords
     
     ## Credits
