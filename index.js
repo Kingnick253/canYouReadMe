@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const markdown = require('./generateMarkdown.js');
+const markdown = require('./assets/generateMarkdown.js');
 const path = require('path');
 // The readme file needs!! 
 // 1.what the app is for?
@@ -36,7 +36,7 @@ const questions = [
             {
                 type:'input',
                 message:'Please provide a brief description of your project:',
-                name:'Description',
+                name:'description',
             },
             {
                 type:'input',
@@ -57,7 +57,7 @@ const questions = [
                 type:'list',
                 message:'Please select which license you would like to use from this list:',
                 choices: ['Apache_2.0', 'Boost_1.0','BSD_3','Perl','N/A'],
-                name: 'License',
+                name: 'license',
             },
             {
                 type:'input',
@@ -107,4 +107,4 @@ const questions = [
 
 
 // Function call to initialize app
- init();
+ init()

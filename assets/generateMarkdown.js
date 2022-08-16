@@ -1,9 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license){
-    return `![License:${license}](https://img.shields.io/badge${license}-green.svg)`
-  }
+  // if (license){
+  //   return `![License:${license}](https://img.shields.io/badge${license}-green.svg)`
+  // }
 
   if(license === "Apache_2.0"){
       return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
@@ -65,60 +65,60 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `
-    # ${data.title}
+  # ${data.title}
     ${renderLicenseLink(data.license)}
 
-    ## Description 
+  ## Description 
     ${data.description}
     
-    Brief description explaining the what, why, and how
-    - what was the motivation?
-    - Why did you build this project?
-    - What problem does it solve?
-    - What did you learn?
+  Brief description explaining the what, why, and how
+  - what was the motivation?
+  - Why did you build this project?
+  - What problem does it solve?
+  - What did you learn?
     
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributions](#contribution)
-    - [Tests](#tests)
-    - [Questions](#questions)
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributions](#contribution)
+  - [Tests](#tests)
+  - [Questions](#questions)
     
-    ## Installation
-    ${data.installation}
-    
-    
-    ## Usage
-    ${data.usage}
-    Provide instructions and examples for use. Include Screenshots/Screenrecords
-    
-    ## Credits
-    ${data.credit}
-    md
-    List of collaaborators if any link their Github profiles.
-    Any third-party assets that require attribution
+  ## Installation
+  ${data.installation}
     
     
-    ## License
-    ${renderLicenseBadge(data.license)}
-    ${data.credit}
-    ${renderLicenseSection(license)}
+  ## Usage
+  ${data.usage}
+  Provide instructions and examples for use. Include Screenshots/Screenrecords
     
-    Add License information
+  ## Credits
+  ${data.credit}
     
-    ## Contributions
+  List of collaaborators if any link their Github profiles.
+  Any third-party assets that require attribution
     
-    If you created an application of package and would like other development
     
-    ## Tests
+  ## License
+  ${renderLicenseBadge(data.license)}
+  ${data.credit}
+  ${renderLicenseSection(data.license)}
     
-    This is where the test that you have made will go 
+  Add License information
     
-    ## Questions
+  ## Contributions
+    
+  If you created an application of package and would like other development
+    
+  ## Tests
+    
+  This is where the test that you have made will go 
+    
+  ## Questions
     You can contact me at:
-      Gmail:${data.email}
-      Github:${data.github}
+    Gmail:${data.email}
+    Github:${data.github}
      `;
 }
 
