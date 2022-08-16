@@ -101,8 +101,9 @@ function generateMarkdown(data) {
     
     
     ## License
-   
+    ${renderLicenseBadge(data.license)}
     ${data.credit}
+    ${renderLicenseSection(license)}
     
     Add License information
     
