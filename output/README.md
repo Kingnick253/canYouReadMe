@@ -31,7 +31,7 @@ Any third-party assets that require attribution
 ```
 
 ## License
-
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 Add License information
 
 ## Contributions

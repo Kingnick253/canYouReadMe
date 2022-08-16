@@ -56,7 +56,7 @@ const questions = [
             {
                 type:'list',
                 message:'Please select which license you would like to use from this list:',
-                choices: ['Apache License 2.0', 'Boost Software License 1.0','BSD 3-License','BSD 2-License'],
+                choices: ['Apache_2.0', 'Boost_1.0','BSD_3','Perl','N/A'],
                 name: 'License',
             },
             {
