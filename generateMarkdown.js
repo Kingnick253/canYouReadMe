@@ -3,35 +3,31 @@
 function renderLicenseBadge(license) {
   if (license){
     return `![License:${license}](https://img.shields.io/badge${license}-green.svg)`
-  }else{
-    return ' '
   }
-}
+
+  if(license === "Apache_2.0"){
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+  }
+  if(license === "Boost_1.0"){
+      return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
+  }
+  if(license === "BSD_3.0"){
+      return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
+  }
+  if(license === "Perl"){
+      return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]`
+  }
+  if(license === "N/A"){
+      return ` `
+  }
+  
+  
+  }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license === "Apache_2.0"){
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
-  }
-  if(license === "Boost_1.0"){
-    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
-  }
-  if(license === "BSD_3.0"){
-    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
-  }
-  if(license === "Perl"){
-    return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]`
-  }
-  if(license === "N/A"){
-    return ` `
-  }
-  
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
   if(license === "Apache_2.0"){
     return `(https://opensource.org/licenses/Apache-2.0)`
   }
@@ -47,6 +43,15 @@ function renderLicenseSection(license) {
   if(license === "N/A"){
     return ` `
   }
+  
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+ if(license){
+  return `Covered by ${data.license}`
+ }
 
 }
 
@@ -59,7 +64,9 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    return `# ${renderTitle(data.title)}
+    return `
+    # ${data.title}
+    ${renderLicenseLink(data.license)}
 
     ## Description 
     ${data.description}
@@ -94,6 +101,7 @@ function generateMarkdown(data) {
     
     
     ## License
+   
     ${data.credit}
     
     Add License information
