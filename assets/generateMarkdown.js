@@ -1,9 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  // if (license){
-  //   return `![License:${license}](https://img.shields.io/badge${license}-green.svg)`
-  // }
+  
 
   if(license === "Apache_2.0"){
       return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
@@ -71,11 +69,7 @@ ${renderLicenseBadge(data.license)}
 ## Description 
   ${data.description}
     
-Brief description explaining the what, why, and how
-- what was the motivation?
-- Why did you build this project?
-- What problem does it solve?
-- What did you learn?
+
     
 ## Table of Contents
   - [Installation](#installation)
@@ -94,17 +88,16 @@ Brief description explaining the what, why, and how
   Provide instructions and examples for use. Include Screenshots/Screenrecords
     
 ## Credits
-  ${data.credit}
+Collaborators: ${data.credit}
     
-  List of collaaborators if any link their Github profiles.
-  Any third-party assets that require attribution
+  
     
     
 ## License
 ${renderLicenseBadge(data.license)}
 ${renderLicenseSection(data.license)}
     
-  Add License information
+  
     
   ## Contributions
     

@@ -81,29 +81,7 @@ const questions = [
     }
 
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     const readMe = generateReadMe(response);
 
-//     fs.writeFile('index.html', htmlPull, (err) =>
-//       err ? console.error(err): console.log("Page has been created")  
-//       )
-    
-
-// }
-
-
-// TODO: Create a function to initialize app
-// function init() {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponse, data) => {   
-//         console.log("Making ReadMe");
-//         fs.writeFileSync("ReadMe.md", inquirerResponse, data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-// }
 
 
 // Function call to initialize app
