@@ -50,7 +50,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
  if(license){
-  return `Covered by ${data.license}`
+  return `Covered by ${license}`
  }
 
 }
@@ -65,19 +65,19 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `
-  # ${data.title}
-    ${renderLicenseLink(data.license)}
+# ${data.title}
+${renderLicenseBadge(data.license)}
 
-  ## Description 
-    ${data.description}
+## Description 
+  ${data.description}
     
-  Brief description explaining the what, why, and how
-  - what was the motivation?
-  - Why did you build this project?
-  - What problem does it solve?
-  - What did you learn?
+Brief description explaining the what, why, and how
+- what was the motivation?
+- Why did you build this project?
+- What problem does it solve?
+- What did you learn?
     
-  ## Table of Contents
+## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -85,25 +85,24 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Questions](#questions)
     
-  ## Installation
+## Installation
   ${data.installation}
     
     
-  ## Usage
+## Usage
   ${data.usage}
   Provide instructions and examples for use. Include Screenshots/Screenrecords
     
-  ## Credits
+## Credits
   ${data.credit}
     
   List of collaaborators if any link their Github profiles.
   Any third-party assets that require attribution
     
     
-  ## License
-  ${renderLicenseBadge(data.license)}
-  ${data.credit}
-  ${renderLicenseSection(data.license)}
+## License
+${renderLicenseBadge(data.license)}
+${renderLicenseSection(data.license)}
     
   Add License information
     
