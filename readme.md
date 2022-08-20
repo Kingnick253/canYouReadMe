@@ -20,7 +20,7 @@
     
     
 ## Usage
-  upload image
+  ![](images/ReadmeGenerator%20Video.gif)
   
     
 ## Credits
