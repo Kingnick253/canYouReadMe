@@ -1,15 +1,11 @@
 
 # canYouReadMe
-[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]
+
 
 ## Description 
-  This project is fully functional readme generator. That can be used for a multitude of projects to provide the user with a professional readme.md file. This will reduced the amount of time spent at the beginning/end of the project trying create one from scratch.
+  This project is fully functional readme generator. This can be used for a multitude of projects to provide the user with a professional readme.md file. This solves the problem of having to think of what a professional readme looks like, and will reduced the amount of time spent at the beginning/end of the project trying create one from scratch. In this project I learned how to properly utilize a function to write a file and send it to a different folder.
     
-Brief description explaining the what, why, and how
-- what was the motivation?
-- Why did you build this project?
-- What problem does it solve?
-- What did you learn?
+
     
 ## Table of Contents
   - [Installation](#installation)
@@ -34,8 +30,7 @@ Brief description explaining the what, why, and how
     
     
 ## License
-[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]
-Covered by Perl
+
     
   
     

@@ -21,9 +21,7 @@ const path = require('path');
 // 5. how to make contributions.
 // TODO: Create an array of questions for user input
 
-function writeToFile (fileName, data){
-    fs.writeFileSync(path.join(process.cwd(),fileName),data);
-}
+
 function init(){
 const questions = [ 
     inquirer
@@ -79,7 +77,10 @@ const questions = [
     ];
     
     }
-
+    // Creates function to write the readme file
+    function writeToFile (fileName, data){
+        fs.writeFileSync(path.join(process.cwd(),fileName),data);
+    }
 
 
 
